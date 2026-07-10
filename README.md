@@ -35,7 +35,7 @@ I chose the **MERN** stack (MongoDB, Express, React, Node.js) combined with **Ta
 
 ## 🤖 AI Integration
 
-This project integrates the **Google Gemini API** (`gemini-1.5-flash` model). 
+This project integrates the **Google Gemini API** (`gemini-2.0-flash` model). 
 *   **How it works:** When a user types a rough task title and clicks the "AI Suggest" button, the frontend sends the title to a protected backend route. 
 *   **Security:** The `GEMINI_API_KEY` is securely stored in the backend `.env` file and is never exposed to the client. The backend formats a strict prompt instructing the AI to return a JSON object containing a professional description and priority level, which is then parsed and sent back to populate the frontend form.
 

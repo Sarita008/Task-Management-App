@@ -24,32 +24,6 @@ const verifyToken = (req, res, next) => {
   }
 };
 
-// // AI Suggest Route
-// router.post('/ai-suggest', verifyToken, async (req, res) => {
-//     try {
-//         const { title } = req.body;
-//         console.log('Title:', title)
-//         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-//         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-//         const prompt = `I am creating a task with the title "${title}". Provide a 2-3 sentence professional description for this task, and suggest a priority level (must be exactly 'Low', 'Medium', or 'High'). Return the result in strict JSON format like this: {"description": "string", "priority": "string"}`;
-
-//         const result = await model.generateContent(prompt);
-//         const responseText = result.response.text();
-//         const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-
-//         if (jsonMatch) {
-//             const aiData = JSON.parse(jsonMatch[0]);
-//             res.json(aiData);
-//         } else {
-//             res.status(400).json({ error: "Failed to parse AI response" });
-//         }
-//     } catch (err) {
-//         console.log(err)
-//         res.status(500).json({ error: err.message });
-//     }
-// });
-
 // AI Suggest Route
 router.post("/ai-suggest", verifyToken, async (req, res) => {
   try {
