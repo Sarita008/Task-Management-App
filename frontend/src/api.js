@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://task-management-app-3i9b.vercel.app/api',
+    baseURL: 'https://task-management-app-bygj.onrender.com/api',
     // baseURL: 'http://localhost:5000/api',
 });
 
