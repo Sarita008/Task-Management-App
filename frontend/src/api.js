@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-    // baseURL: '<PROD_URL>/api',
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://task-management-app-3i9b.vercel.app/api',
+    // baseURL: 'http://localhost:5000/api',
 });
 
 api.interceptors.request.use((config) => {
